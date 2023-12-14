@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="static/images/favicon.png" type="image/x-icon">
+
+  <title>vet</title>
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="static/css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- Flatpickr JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <link href="static/css/reservA.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area ">
+    <div class="hero_bg_box">
+      <img src="static/images/hero-bg.jpg" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="showDB.php">
+            <span>
+              VetPals/Admin
+            </span>
+          </a>
+        </nav>
+      </div>
+  </header>
+  <!-- end header section -->
+
+  <div class="main_content">
+    <div class="main_content_bg">
+      <img src="static/images/content-bg.jpg" alt="">
+    </div>
+    <!-- reserve section -->
+    <section class="contact_section layout_padding">
+      <div class="container">
+        <form method="POST" action="appA.php" id="myForm">
+          <div class="text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="form-group"> 
+                      <input type="text" class="form-control" pattern="\d{}" placeholder="Owner ID" name="oid" required>
+                    </div>
+                    
+                    <div class="mt-4 mb-4">
+                      <input type="text" name="Appdate" id="Appdate" class="form-control" placeholder="Select Date">
+                    </div>
+
+                    <div class="form-group mt-4">
+                      <input type="text" class="form-control" placeholder="Owner Name" name="oname" required>
+                    </div>
+
+                    <div class="form-group mt-4">
+                      <input type="email" class="form-control" placeholder="Owner Email" name="oemail" required>
+                    </div>
+
+                    <div class="form-group mt-4">
+                      <input type="text" class="form-control" pattern="\d{8}" maxlength="8"  placeholder="Owner Phone Number" name="ophone" required>
+                    </div>
+
+                    <div class="form-group mt-4 mb-4">
+                      <input type="text" class="form-control" placeholder="Pet Name" name="pname" required>
+                    </div>
+                    <div class="form-group mt-4">
+                        <button type="submit" style="background-color: #55E9BC; border: #55E9BC; color: white;" class="btn button-style">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</div> 
+  <!-- end reserve section -->
+
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section ">
+    <p>
+      &copy; <span id="displayDate"></span> All Rights Reserved.
+    </p>
+  </footer>
+  <!-- end  footer section -->
+
+  <script src="static/js/jquery-3.4.1.min.js"></script>
+  <script src="static/js/bootstrap.js"></script>
+
+  <script>
+    flatpickr("#Appdate", {
+        dateFormat: "Y-m-d",
+    });
+
+    document.getElementById('myForm').addEventListener('submit',
+      function(event) {
+        var appdate = document.getElementById('Appdate').value;
+        var dateValue = new Date(appdate);
+        if (isNaN(dateValue)) {
+            alert('Please select a valid date');
+            event.preventDefault();
+        }
+      }
+    );
+</script>
+  
+</body>
+
+</html>

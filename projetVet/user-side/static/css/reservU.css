@@ -1,0 +1,42 @@
+select.form-select {
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    background: #fff url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' class='bi bi-caret-down' viewBox='0 0 16 16'><path d='M14.354 5.646a.5.5 0 0 0-.708 0L8 11.293 2.354 5.646a.5.5 0 0 0-.708.708l6 6a.5.5 0 0 0 .708 0l6-6a.5.5 0 0 0 0-.708z'/></svg>") no-repeat right 0.75rem center;
+    background-size: 20px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+/* Focus styles */
+select.form-select:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Progress bar */
+.progress {
+height: 6px;
+border-radius: 10px;
+overflow: hidden;
+background-color: #f0f0f0;
+}
+
+.progress-bar {
+animation: sparkle 1s infinite alternate;
+background: linear-gradient(90deg, rgba(255,255,255,0), #55E9BC, rgba(255,255,255,0));
+background-size: 200% auto;
+}
+
+@keyframes sparkle {
+to {
+    background-position: 200% center;
+   }
+}

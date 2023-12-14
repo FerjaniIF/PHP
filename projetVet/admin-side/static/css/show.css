@@ -1,0 +1,23 @@
+table,th,td {
+    border: 1px solid rgb(255, 255, 255);
+  }
+  tr:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  th {
+    background-color: rgb(118, 200, 221);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+  }
+  button {
+    border-radius: 12px;
+    color: aqua;
+    background-color: #04AA6D;
+    cursor: pointer;
+  }
+  th { text-align: center;}
+  td{
+    font-size: small; text-align: center; padding: 10px;
+  }
